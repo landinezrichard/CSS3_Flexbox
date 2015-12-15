@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <!-- Para hacerlo responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>	Flexbox</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  </head>
+  <body>
+    <div class="MainContainer">
+      <h1>Aprendiendo Flexbox</h1>
+      <p>	Contenedor con Propiedad<span class="Prop">	display: flex</span>
+        <p>	Por defecto, así no se indique, tiene las propiedades<span class="Prop">	flex-direction: row</span>	Y<span class="Prop">	flex-wrap: nowrap</span></p>
+      </p>
+      <div class="FlexContainer ">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-direction: row-reverse</span>
+      </p>
+      <div class="FlexContainer second">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-direction: column</span>
+      </p>
+      <div class="FlexContainer three">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-direction: row-reverse</span>
+      </p>
+      <div class="FlexContainer four">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-wrap: wrap</span>
+      </p>
+      <div class="FlexContainer five">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+        <div class="FlexItem">	Flex Item 6</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-wrap: wrap-reverse</span>
+      </p>
+      <div class="FlexContainer six">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+        <div class="FlexItem">	Flex Item 6</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: flex-direction flex-wrap</span><span class="Prop">	flex-flow: column-reverse wrap-reverse</span>
+      </p>
+      <div class="FlexContainer seven">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+        <div class="FlexItem">	Flex Item 6</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: flex-end</span>
+        <p><span class="Prop">	"flex-start"</span>	es el valor por defecto de la propiedad<span class="Prop">	justify-content</span></p>
+      </p>
+      <div class="FlexContainer eight">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: center</span>
+      </p>
+      <div class="FlexContainer nine">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: space-between</span>
+      </p>
+      <div class="FlexContainer ten">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: space-around</span>
+      </p>
+      <div class="FlexContainer eleven">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: flex-end</span>
+        <p><span class="Prop">	"stretch"</span>	es el valor por defecto de la propiedad<span class="Prop">	align-items</span>	Y tambien pueden tener el valor<span class="Prop">	"flex-start"</span></p>
+      </p>
+      <div class="FlexContainer twelve">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: center</span>
+      </p>
+      <div class="FlexContainer thirteen">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: baseline</span>
+        <p>	La propiedad<span class="Prop">	"align-items: baseline"</span>	hace que los items se alinien respecto a su texto.	</p>
+      </p>
+      <div class="FlexContainer fourteen">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: stretch</span>
+        <p>	La propiedad<span class="Prop">	"align-items: stretch"</span>	hace que los items ocupen el alto del contenedor.</p>
+      </p>
+      <div class="FlexContainer fiveteen">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row wrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: center</span><span class="Prop">	align-content: space-between</span>
+        <p>	La propiedad<span class="Prop">	"align-content"</span>	Nos permite alinear los items en el eje vertical, o más bien, definir el espacio entre estos, con los valores:<span class="Prop">	"flex-start - flex-end - center - space-between - space-around - stretch"</span>
+          <h3>	Nota: solo funciona cuando los items ocupan 2 o más filas/columnas</h3>
+        </p>
+      </p>
+      <div class="FlexContainer sixteen">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+      </div>
+      <h2>	Propiedades para los "Flex Items"</h2>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row wrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: center</span><span class="Prop">	align-content: space-around</span>
+      </p>
+      <ul>
+        <li>	El Flex Item 1 tiene la propiedad:<span class="Prop">	order:3</span></li>
+        <li>	El Flex Item 2 tiene la propiedad:<span class="Prop">	order:2</span></li>
+        <li>	El Flex Item 3 tiene la propiedad:<span class="Prop">	order:3</span></li>
+        <li>	El Flex Item 4 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 5 tiene la propiedad:<span class="Prop">	order:1</span></li>
+      </ul>
+      <div class="FlexContainer PropHijos hijo1">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row wrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: center</span><span class="Prop">	align-content: space-around</span>
+      </p>
+      <ul>
+        <li>	El Flex Item 1 tiene la propiedad:<span class="Prop">	flex-grow:1</span></li>
+        <li>	El Flex Item 2 tiene la propiedad:<span class="Prop">	flex-grow:2</span></li>
+        <li>	El Flex Item 3 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 4 tiene la propiedad:<span class="Prop">	flex-grow:2</span></li>
+        <li>	El Flex Item 5 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+      </ul>
+      <div class="FlexContainer PropHijos hijo2">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: center</span><span class="Prop">	align-content: space-around</span>
+      </p>
+      <ul>
+        <li>	El Flex Item 1 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 2 tiene la propiedad:<span class="Prop">	flex-shrink: 0</span></li>
+        <li>	El Flex Item 3 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 4 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 5 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 6 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+      </ul>
+      <div class="FlexContainer PropHijos hijo3">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+        <div class="FlexItem">	Flex Item 6</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: column wrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: center</span><span class="Prop">	align-content: space-around</span>
+      </p>
+      <ul>
+        <li>	El Flex Item 1 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 2 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 3 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 4 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 5 tiene la propiedad:<span class="Prop">	flex-basis: 265px</span></li>
+      </ul>
+      <div class="FlexContainer PropHijos hijo4">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: column wrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: center</span><span class="Prop">	align-content: space-around</span>
+      </p>
+      <ul>
+        <li>	El Flex Item 1 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 2 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 3 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 4 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 5 tiene la propiedad:<span class="Prop">	flex: 0</span></li>
+        <p>	La propiedad<span class="Prop">	"flex"</span>	Es un shorthand para las pripiedades:<span class="Prop">	"flex-grow, flex-shrink, flex-basis"</span>	"flex-shrink" y "flex-basis" son opcionales. Los valores por defecto de c/u son:<span class="Prop">	0 1 auto</span></p>
+      </ul>
+      <div class="FlexContainer PropHijos hijo5">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+      </div>
+      <p>	Contenedor con Propiedad<span class="Prop">	flex-flow: row nowrap</span><span class="Prop">	justify-content: space-around</span><span class="Prop">	align-items: center</span><span class="Prop">	align-content: space-around</span>
+      </p>
+      <ul>
+        <li>	El Flex Item 1 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 2 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 3 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <li>	El Flex Item 4 tiene la propiedad:<span class="Prop">	align-self: flex-end</span></li>
+        <li>	El Flex Item 5 tiene la propiedad:<span class="Prop">	ninguno</span></li>
+        <p>	La propiedad<span class="Prop">	"align-self"</span>	tiene disponibles los mismos valores que la propiedad del contenedor:<span class="Prop">	"align-items"</span></p>
+      </ul>
+      <div class="FlexContainer PropHijos hijo6">
+        <div class="FlexItem">	Flex Item 1</div>
+        <div class="FlexItem">	Flex Item 2</div>
+        <div class="FlexItem">	Flex Item 3</div>
+        <div class="FlexItem">	Flex Item 4</div>
+        <div class="FlexItem">	Flex Item 5</div>
+      </div>
+      <h3>	Las propiedades<span class="Prop">	float, clear, vertical-align</span>	No tienen efecto en un Flex Item</h3>
+    </div>
+  </body>
+</html>

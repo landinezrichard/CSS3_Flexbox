@@ -1,0 +1,72 @@
+p
+	|	Contenedor con Propiedad
+	case i
+		when 'uno'
+			each item in data.props
+				span.Prop
+					|	#{item}
+			p
+				|	Por defecto, así no se indique, tiene las propiedades
+				span.Prop
+					|	flex-direction: row
+				|	Y
+				span.Prop
+					|	flex-wrap: nowrap
+		when 'ocho'
+			each item in data.props
+				span.Prop
+					|	#{item}
+			p
+				span.Prop
+					|	"flex-start"
+				|	es el valor por defecto de la propiedad
+				span.Prop
+					|	justify-content
+		when 'doce'
+			each item in data.props
+				span.Prop
+					|	#{item}
+			p
+				span.Prop
+					|	"stretch"
+				|	es el valor por defecto de la propiedad
+				span.Prop
+					|	align-items
+				|	Y tambien pueden tener el valor
+				span.Prop
+					|	"flex-start"
+		when 'catorce'
+			each item in data.props
+				span.Prop
+					|	#{item}
+			p
+				|	La propiedad
+				span.Prop
+					|	"align-items: baseline"
+				|	hace que los items se alinien respecto a su texto.	
+		when 'quince'
+			each item in data.props
+				span.Prop
+					|	#{item}
+			p
+				|	La propiedad
+				span.Prop
+					|	"align-items: stretch"
+				|	hace que los items ocupen el alto del contenedor.
+		when 'dieciseis'
+			each item in data.props
+				span.Prop
+					|	#{item}
+			p
+				|	La propiedad
+				span.Prop
+					|	"align-content"
+				|	Nos permite alinear los items en el eje vertical, o más bien, definir el espacio entre estos, con los valores:
+				span.Prop
+					|	"flex-start - flex-end - center - space-between - space-around - stretch"
+				h3
+					|	Nota: solo funciona cuando los items ocupan 2 o más filas/columnas
+		default
+			each item in data.props
+				span.Prop
+					|	#{item}

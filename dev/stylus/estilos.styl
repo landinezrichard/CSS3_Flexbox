@@ -1,0 +1,173 @@
+@import "nib"
+@import "normalize.styl"
+
+gris = #EBEBEB
+verde = #007f52
+azul = #85bdde
+azul_vivo = #00b4d2		
+rojo_suave = #d7575c
+verde_item = #00c9a6
+fondo_item = #002821
+
+@import "../components/FlexItem/estilos.styl"
+
+body
+	background gris
+	
+.MainContainer
+	margin 0 auto
+	width 800px
+	
+.FlexContainer
+	background azul
+	width 800px
+	height 350px
+	display flex
+	
+.second
+	flex-direction row-reverse
+	
+.three
+	flex-direction column
+	
+.four
+	flex-direction column-reverse
+	
+.five
+	flex-wrap wrap
+	
+.six
+	flex-wrap wrap-reverse
+	
+.seven	
+	flex-flow column-reverse wrap-reverse
+	
+.eight
+	flex-flow row nowrap
+	justify-content flex-end
+	
+.nine
+	flex-flow row nowrap
+	justify-content center
+	
+.ten
+	flex-flow row nowrap
+	justify-content space-between
+
+.eleven
+	flex-flow row nowrap
+	justify-content space-around
+	
+.twelve
+	flex-flow row nowrap
+	justify-content space-around
+	align-items flex-end
+	
+.thirteen
+	flex-flow row nowrap
+	justify-content space-around
+	align-items center
+	
+.fourteen
+	flex-flow row nowrap
+	justify-content space-around
+	align-items baseline
+	
+	.FlexItem
+		&:nth-of-type(1)
+			padding-top 1em
+		&:nth-of-type(2)
+			padding-top 3em
+	
+.fiveteen
+	flex-flow row nowrap
+	justify-content space-around
+	align-items stretch
+	
+	.FlexItem
+		height inherit
+		
+.sixteen
+	flex-flow row wrap
+	justify-content space-around
+	align-items center
+	align-content space-between
+	
+.PropHijos
+	background fondo_item
+	.FlexItem
+		background verde_item
+		
+.hijo1
+	flex-flow row wrap
+	justify-content space-around
+	align-items center
+	align-content space-around
+	.FlexItem
+		&:nth-of-type(1)
+			order 3
+		&:nth-of-type(2)
+			order 2
+		&:nth-of-type(3)
+			order 3
+		&:nth-of-type(5)
+			order 1
+			
+.hijo2
+	flex-flow row wrap
+	justify-content space-around
+	align-items center
+	align-content space-around
+	.FlexItem
+		&:nth-of-type(1)
+			flex-grow 1
+		&:nth-of-type(2)
+			flex-grow 2
+		&:nth-of-type(4)
+			flex-grow 2
+		
+.hijo3
+	flex-flow row nowrap
+	justify-content space-around
+	align-items center
+	align-content space-around
+	.FlexItem
+		&:nth-of-type(2)
+			flex-shrink 0
+			
+.hijo4
+	flex-flow column wrap
+	justify-content space-around
+	align-items center
+	align-content space-around
+	.FlexItem
+		&:nth-of-type(5)
+			flex-basis 265px
+			
+.hijo5
+	flex-flow column wrap
+	justify-content space-around
+	align-items center
+	align-content space-around
+	.FlexItem
+		&:nth-of-type(5)
+			flex 0
+			
+.hijo6
+	flex-flow row nowrap
+	justify-content space-around
+	align-items center
+	align-content space-around
+	.FlexItem
+		&:nth-of-type(4)
+			align-self flex-end
+		
+.Prop
+	//color azul_vivo
+	font-weight 900
+	&:nth-child(3n+1)
+		color azul_vivo
+	&:nth-child(3n+2)
+		color rojo_suave
+	&:nth-child(3n+3)
+		color #52007f

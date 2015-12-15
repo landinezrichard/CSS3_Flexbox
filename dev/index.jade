@@ -1,0 +1,34 @@
+doctype html
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		// Para hacerlo responsive
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+		title
+			|	Flexbox
+		link(rel="stylesheet", type="text/css", href="css/estilos.css")
+	body
+		div.MainContainer
+			h1 Aprendiendo Flexbox
+			- var info = {"uno":{"clase":"","list":[1,2,3,4],"props":["display: flex"]},"dos":{"clase":"second","list":[1,2,3],"props":["flex-direction: row-reverse"]},"tres":{"clase":"three","list":[1,2,3],"props":["flex-direction: column"]},"cuatro":{"clase":"four","list":[1,2,3],"props":["flex-direction: row-reverse"]},"cinco":{"clase":"five","list":[1,2,3,4,5,6],"props":["flex-wrap: wrap"]},"seis":{"clase":"six","list":[1,2,3,4,5,6],"props":["flex-wrap: wrap-reverse"]},"siete":{"clase":"seven","list":[1,2,3,4,5,6],"props":["flex-flow: flex-direction flex-wrap","flex-flow: column-reverse wrap-reverse"]},"ocho":{"clase":"eight","list":[1,2,3],"props":["flex-flow: row nowrap","justify-content: flex-end"]},"nueve":{"clase":"nine","list":[1,2,3],"props":["flex-flow: row nowrap","justify-content: center"]},"diez":{"clase":"ten","list":[1,2,3],"props":["flex-flow: row nowrap","justify-content: space-between"]},"once":{"clase":"eleven","list":[1,2,3],"props":["flex-flow: row nowrap","justify-content: space-around"]},"doce":{"clase":"twelve","list":[1,2,3],"props":["flex-flow: row nowrap","justify-content: space-around","align-items: flex-end"]},"trece":{"clase":"thirteen","list":[1,2,3],"props":["flex-flow: row nowrap","justify-content: space-around","align-items: center"]},"catorce":{"clase":"fourteen","list":[1,2,3],"props":["flex-flow: row nowrap","justify-content: space-around","align-items: baseline"]},"quince":{"clase":"fiveteen","list":[1,2,3],"props":["flex-flow: row nowrap","justify-content: space-around","align-items: stretch"]},"dieciseis":{"clase":"sixteen","list":[1,2,3,4,5],"props":["flex-flow: row wrap","justify-content: space-around","align-items: center","align-content: space-between"]}}
+			
+			each val,index in info
+				- data = val
+				- var i = index			
+				include ./components/PropsDescription/template.jade
+				include ./components/FlexContainer/template.jade
+
+			h2
+				|	Propiedades para los "Flex Items"
+			- info = {"hijo1":{"clase":"PropHijos hijo1","list":[1,2,3,4,5],"props":["flex-flow: row wrap","justify-content: space-around","align-items: center","align-content: space-around"],"itemProps":["order:3","order:2","order:3","ninguno","order:1"]},"hijo2":{"clase":"PropHijos hijo2","list":[1,2,3,4,5],"props":["flex-flow: row wrap","justify-content: space-around","align-items: center","align-content: space-around"],"itemProps":["flex-grow:1","flex-grow:2","ninguno","flex-grow:2","ninguno"]},"hijo3":{"clase":"PropHijos hijo3","list":[1,2,3,4,5,6],"props":["flex-flow: row nowrap","justify-content: space-around","align-items: center","align-content: space-around"],"itemProps":["ninguno","flex-shrink: 0","ninguno","ninguno","ninguno","ninguno"]},"hijo4":{"clase":"PropHijos hijo4","list":[1,2,3,4,5],"props":["flex-flow: column wrap","justify-content: space-around","align-items: center","align-content: space-around"],"itemProps":["ninguno","ninguno","ninguno","ninguno","flex-basis: 265px"]},"hijo5":{"clase":"PropHijos hijo5","list":[1,2,3,4,5],"props":["flex-flow: column wrap","justify-content: space-around","align-items: center","align-content: space-around"],"itemProps":["ninguno","ninguno","ninguno","ninguno","flex: 0"]},"hijo6":{"clase":"PropHijos hijo6","list":[1,2,3,4,5],"props":["flex-flow: row nowrap","justify-content: space-around","align-items: center","align-content: space-around"],"itemProps":["ninguno","ninguno","ninguno","align-self: flex-end","ninguno"]}}
+			each val,index in info
+				- data = val
+				- var i = index			
+				include ./components/PropsDescription/template.jade
+				include ./components/ItemDescription/template.jade
+				include ./components/FlexContainer/template.jade
+			h3
+				|	Las propiedades
+				span.Prop
+					|	float, clear, vertical-align
+				|	No tienen efecto en un Flex Item

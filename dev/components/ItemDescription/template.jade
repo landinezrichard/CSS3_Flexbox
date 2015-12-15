@@ -1,0 +1,25 @@
+ul
+	each val in data.list
+		li
+			|	El Flex Item #{val} tiene la propiedad:
+			span.Prop
+				|	#{data.itemProps[val-1]}
+	if i=="hijo5"
+		p
+			|	La propiedad
+			span.Prop
+				|	"flex"
+			|	Es un shorthand para las pripiedades:
+			span.Prop
+				|	"flex-grow, flex-shrink, flex-basis"
+			|	"flex-shrink" y "flex-basis" son opcionales. Los valores por defecto de c/u son:
+			span.Prop
+				|	0 1 auto
+	if i=="hijo6"
+		p
+			|	La propiedad
+			span.Prop
+				|	"align-self"
+			|	tiene disponibles los mismos valores que la propiedad del contenedor:
+			span.Prop
+				|	"align-items"
