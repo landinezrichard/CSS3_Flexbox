@@ -2,14 +2,19 @@
 * Dependencias
 */
 var gulp    = require('gulp'),
-  webserver = require('gulp-webserver'),
-  concat    = require('gulp-concat'),
+  webserver = require('gulp-webserver'),  
   uglify    = require('gulp-uglify'),
   stylus    = require('gulp-stylus'),
   nib       = require('nib'),
   minifyCSS = require('gulp-minify-css'),
   jade      = require('gulp-jade'),
-  debug     = require('gulp-debug');
+  browserify= require('browserify'),
+  jadeify   = require('jadeify'),
+  babelify  = require('babelify'),
+  buffer    = require('vinyl-buffer'),
+  source    = require('vinyl-source-stream')
+  debug     = require('gulp-debug'),
+  imageop   = require('gulp-image-optimization');
 
 /*
 * Rutas de los archivos 
@@ -30,6 +35,14 @@ var paths = {
     main  : 'dev/app.js',
     watch : 'dev/**/*.js',
     dest  : 'public/js/'
+  },
+  images:{
+    watch : ['dev/assets/**/*.png','dev/assets/**/*.jpg','dev/assets/**/*.gif','dev/assets/**/*.jpeg'],
+    dest  : 'public/' //se guardan en public/img/
+  },
+  fonts:{
+    watch : ['dev/assets/**/*.eot','dev/assets/**/*.svg','dev/assets/**/*.ttf','dev/assets/**/*.woff'],
+    dest  : 'public/'//se guardan en public/fonts/
   }
 };
 
@@ -67,7 +80,7 @@ gulp.task('build-css', function(){
 * Tarea build-html
 */
 gulp.task('build-html', function() {
-  return gulp.src(paths.html.main)
+  gulp.src(paths.html.main)
   .pipe(jade({
       pretty: true
   }))
@@ -79,11 +92,41 @@ gulp.task('build-html', function() {
 * Tarea build-js
 */
 gulp.task('build-js', function() {
-  gulp.src(paths.js.main)
-  .pipe(concat('app.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest(paths.js.dest))
+  return browserify({
+    entries: paths.js.main, //punto de entrada js
+    debug: true, 
+    transform:[["babelify",{ "presets": ['es2015'] }], jadeify] //transformaciones
+  })
+  .bundle()
+  .pipe(source('app.js'))//archivo destino
+  .pipe(buffer())
+  .pipe(uglify())//minificamos js
+  .pipe(gulp.dest(paths.js.dest))//en donde va a estar el archivo destino
 });
+
+/*
+* Tarea Minificar y Optimizar imagenes
+*/
+
+gulp.task('image-min', function(){
+  gulp.src(paths.images.watch)
+  .pipe(imageop({
+    optimizationLevel: 5,
+    progressive: true,
+    interlaced: true
+  }))
+  .pipe(gulp.dest(paths.images.dest))
+});
+
+/*
+* Tarea Copiar fuentes
+*/
+
+gulp.task('copy-fonts', function(){
+  return gulp.src(paths.fonts.watch)
+    .pipe(gulp.dest(paths.fonts.dest));
+});
+
 
 /*
 * Tarea watch
@@ -93,13 +136,14 @@ gulp.task('watch', function(){
   gulp.watch(paths.css.watch, ['build-css']);
   gulp.watch(paths.html.watch, ['build-html']);
   gulp.watch(paths.js.watch, ['build-js']);
+  gulp.watch(paths.images.watch, ['image-min']);
 });
 
 /*
 * build all
 */
 
-gulp.task('build', ['build-css','build-html','build-js']);
+gulp.task('build', ['build-css','build-html','build-js','image-min','copy-fonts']);
 
 /*
 * Tarea por defecto
